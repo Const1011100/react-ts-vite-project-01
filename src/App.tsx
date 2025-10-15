@@ -1,56 +1,56 @@
 import { useEffect, useState } from 'react';
 
 export function App() {
-  const [selectedTrackId, setSelectedTrackId] = useState(null);
-  const [selectedTrack, setSelectedTrack] = useState(null);
-  const [tracks, setTracks] = useState(null);
+  //const [selectedTrackId, setSelectedTrackId] = useState(null);
+  //const [selectedTrack, setSelectedTrack] = useState(null);
+  //const [tracks, setTracks] = useState(null);
 
-  useEffect(() => {
-    console.log('effect');
-    fetch('https://musicfun.it-incubator.app/api/1.0/playlists/tracks', {
-      headers: {
-        'api-key': 'a2d30dd7-be5d-450e-b894-577c16affb4a',
-      },
-    })
-      .then((res) => res.json())
-      .then((json) => setTracks(json.data));
-  }, []);
+  //   useEffect(() => {
+  //     console.log('effect');
+  //     fetch('https://musicfun.it-incubator.app/api/1.0/playlists/tracks', {
+  //       headers: {
+  //         'api-key': 'a2d30dd7-be5d-450e-b894-577c16affb4a',
+  //       },
+  //     })
+  //       .then((res) => res.json())
+  //       .then((json) => setTracks(json.data));
+  //   }, []);
 
-  useEffect(() => {
-    if (!selectedTrackId) {
-      return;
-    }
+  //   useEffect(() => {
+  //     if (!selectedTrackId) {
+  //       return;
+  //     }
 
-    fetch(
-      'https://musicfun.it-incubator.app/api/1.0/playlists/tracks/' +
-        selectedTrackId,
-      {
-        headers: {
-          'api-key': 'a2d30dd7-be5d-450e-b894-577c16affb4a',
-        },
-      }
-    )
-      .then((res) => res.json())
-      .then((json) => setSelectedTrack(json.data));
-  }, [selectedTrackId]);
+  //     fetch(
+  //       'https://musicfun.it-incubator.app/api/1.0/playlists/tracks/' +
+  //         selectedTrackId,
+  //       {
+  //         headers: {
+  //           'api-key': 'a2d30dd7-be5d-450e-b894-577c16affb4a',
+  //         },
+  //       }
+  //     )
+  //       .then((res) => res.json())
+  //       .then((json) => setSelectedTrack(json.data));
+  //   }, [selectedTrackId]);
 
-  if (tracks === null) {
-    return (
-      <>
-        <h1>Musicfun Player</h1>
-        <span>Loading...</span>
-      </>
-    );
-  }
+  //   if (tracks === null) {
+  //     return (
+  //       <>
+  //         <h1>Musicfun Player</h1>
+  //         <span>Loading...</span>
+  //       </>
+  //     );
+  //   }
 
-  if (tracks.length === 0) {
-    return (
-      <>
-        <h1>Musicfun Player</h1>
-        <span>No tracks</span>
-      </>
-    );
-  }
+  //   if (tracks.length === 0) {
+  //     return (
+  //       <>
+  //         <h1>Musicfun Player</h1>
+  //         <span>No tracks</span>
+  //       </>
+  //     );
+  //   }
 
   return (
     <>
@@ -64,7 +64,7 @@ export function App() {
         Reset selection
       </button>
       <div style={{ display: 'flex', gap: '10px' }}>
-        <ul>
+        {/* <ul>
           {tracks.map((track) => {
             return (
               <li
@@ -88,8 +88,8 @@ export function App() {
               </li>
             );
           })}
-        </ul>
-        <div>
+        </ul> */}
+        {/* <div>
           <h2>Details</h2>
           {!selectedTrack && !selectedTrackId && 'Track is not selected'}
           {!selectedTrack && selectedTrackId && 'Loading...'}
@@ -104,7 +104,7 @@ export function App() {
               <p>{selectedTrack.attributes.lyrics ?? 'no lyrics'}</p>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );
