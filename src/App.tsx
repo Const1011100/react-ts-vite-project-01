@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+//import { useEffect, useState } from 'react';
 
 export function App() {
   //const [selectedTrackId, setSelectedTrackId] = useState(null);
@@ -57,8 +57,8 @@ export function App() {
       <h1>Musicfun Player</h1>
       <button
         onClick={() => {
-          setSelectedTrackId(null);
-          setSelectedTrack(null);
+          //   setSelectedTrackId(null);
+          //   setSelectedTrack(null);
         }}
       >
         Reset selection
