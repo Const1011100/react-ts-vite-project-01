@@ -1,16 +1,4 @@
-type AttachmentDto = {
-  url: string;
-};
-
-type TrackListItemAttributes = {
-  title: string;
-  attachments: Array<AttachmentDto>;
-};
-
-export type TrackListItemOutput = {
-  id: string;
-  attributes: TrackListItemAttributes;
-};
+import type { TrackListItemOutput } from '../dal/api.ts';
 
 type Props = {
   isSelected: boolean;

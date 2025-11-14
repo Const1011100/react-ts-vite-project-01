@@ -1,5 +1,5 @@
-import { TracksList } from './components/TracksList';
-import { TrackDetail } from './components/TrackDetail';
+import { TracksList } from './ui/TracksList';
+import { TrackDetail } from './ui/TrackDetail';
 import { useState } from 'react';
 
 export function MainPage() {
